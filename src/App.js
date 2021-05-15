@@ -1,11 +1,30 @@
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
+import GetQuiz from './Components/GetQuiz';
+import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import QuizDisplay from "./Components/QuizDisplay/quizDisplay";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <QuizDisplay/>
+      </div>
+    );
+  }
+}
+// function App() {
+//   componentD
+//   return (
+//     <div>
+//         <QuizDisplay/>
+//     </div>
+//   );
+// }
+
+export default App;
+
+/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,10 +35,4 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+        </a> */

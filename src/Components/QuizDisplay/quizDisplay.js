@@ -20,7 +20,7 @@ class QuizDisplay extends Component{
         };
     }
     componentDidMount(){
-        fetch("/")
+        fetch("https://quizerrc-backend.herokuapp.com/")
           .then(response=>response.json())
           .then(console.log);
     }

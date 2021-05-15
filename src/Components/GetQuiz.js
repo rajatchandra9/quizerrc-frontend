@@ -12,12 +12,12 @@ class GetQuiz extends Component{
     }
     componentDidMount(){
         console.log("In component did mount");
-        fetch("/signin/:id/quiz/")
+        fetch("https://quizerrc-backend.herokuapp.com/signin/:id/quiz/")
         .then(response => response.json())
         .then((data) => this.setState({ quizData: data }));
     }
     create=(newQna)=>{
-        fetch("/signin/:id/quiz",{
+        fetch("https://quizerrc-backend.herokuapp.com/signin/:id/quiz",{
             method:"post",
             headers: {"Content-Type":'application/json'},
             body: JSON.stringify({
@@ -42,7 +42,7 @@ class GetQuiz extends Component{
          })
     }
     update=(qid,changedQna)=>{
-        fetch(`/signin/:id/quiz/${qid}`, 
+        fetch(`https://quizerrc-backend.herokuapp.com/signin/:id/quiz/${qid}`, 
         {  
             method: "PATCH",  
             headers: {    "Content-type": "application/json"  },  
@@ -79,7 +79,7 @@ class GetQuiz extends Component{
         .then(data => console.log(data));
     }
     remove=(quizid)=>{
-        fetch(`/signin/:id/quiz/${quizid}`, 
+        fetch(`https://quizerrc-backend.herokuapp.com/signin/:id/quiz/${quizid}`, 
         { method: 'DELETE' })
         .then(res=>res.json())
         .then((result)=>{

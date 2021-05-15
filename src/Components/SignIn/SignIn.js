@@ -16,7 +16,7 @@ class SignIn extends Component{
     handleSubmit=(evt)=>{
         evt.preventDefault();
         alert(`You are signing as ${this.state.username}`);
-        fetch("/signin",{
+        fetch("https://quizerrc-backend.herokuapp.com/signin",{
             method:"post",
             headers: {"Content-Type":'application/json'},
             body: JSON.stringify({
@@ -46,7 +46,7 @@ class SignIn extends Component{
     handleAdminLogin=(evt)=>{
         evt.preventDefault();
         alert(`You are signing as ${this.state.username}`);
-        fetch("/signin",{
+        fetch("https://quizerrc-backend.herokuapp.com/signin",{
             method:"post",
             headers: {"Content-Type":'application/json'},
             body: JSON.stringify({

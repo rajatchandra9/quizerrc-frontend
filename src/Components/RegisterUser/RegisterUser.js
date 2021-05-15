@@ -19,7 +19,7 @@ class RegisterUser extends Component{
     handleSubmit=(evt)=>{
         evt.preventDefault();
         //alert(`${this.state.emailid} ${this.state.name} ${this.state.password}`);
-        fetch("/register",{
+        fetch("https://quizerrc-backend.herokuapp.com/register",{
             method:"post",
             headers: {"Content-Type":'application/json'},
             body: JSON.stringify({
